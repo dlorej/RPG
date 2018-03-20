@@ -1,0 +1,69 @@
+class Player():
+    def __init__ (self):
+        self.history = []
+        self.next_play = ""
+        self.choice = ""
+
+        self.weight = {"max":1}
+        self.options = ['R','P','S'] #possible options
+        self.winning_choice ={'R':'P','P':'S','S':'R'}
+
+    def make_choice(self):
+        self.choice = input("ROCK... PAPER... SCISSORS... SHOOT: ")
+        self.choice = self.choice.upper() #Uppercase
+        while self.choice != 'END':
+            if self.choice in self.options:
+                self.history.append(self.choice)
+            else:
+                print("Error")
+            self.choice = input("ROCK... PAPER... SCISSORS... SHOOT: ")
+            self.choice = self.choice.upper() #Uppercase
+        
+    def weightage(self):
+        global final_decision
+        final_decision = []
+        for x in range(self.weight["max"]):
+            append_max()
+
+        for el in detect_win():
+            if el == "max":
+                self.weight["max"] +=1
+        
+        print(self.next_play)   
+        #add weight
+        
+    def pattern(self):
+        pass
+
+    def detect_win(self):
+        temp_lst_1 = []
+        if self.choice in temp_lst:
+            temp_lst_1.append("max")
+        #if self.choice in temp_lst:
+        #    temp_lst_1.append("pattern")
+        return temp_lst_1
+        #dont use return because both can return True
+            
+            
+        ##for pattern
+        
+    
+    def history_max(self):
+        global temp_lst
+        temp_lst = []
+        global total
+        total=[self.history.count("R"),self.history.count("P"),self.history.count("S")]
+        for a in range (0,3): #detect most frequent choice
+            if max(total) == total[a]:
+                temp_lst.append(options[a])
+        
+    
+    def append_max(self):
+        for a in range (0,3): #detect most frequent choice
+            if max(total) == total[a]:
+                final_decision.append(options[a])
+            
+            
+
+t1 = Player()
+t1.make_choice()
