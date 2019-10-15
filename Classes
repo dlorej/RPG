@@ -1,0 +1,38 @@
+So I'm making a simple game with these 2 modules, this is my code so far.
+
+import threading
+from tkinter import *
+import time
+
+root = Tk()
+
+class Thread_lst():
+ def __init__():
+  self.thread_lst  = [ ]
+
+class Action_thread(threading.Thread):
+ def __init__(**kwargs):
+  self.balance = 100
+  super().__init__(**kwargs)
+
+class Character():
+ def __init__():
+  self.my_thread_lst = Thread_lst()
+
+class Button_lst():
+ def __init__():
+  self.button_lst = [ ]
+
+ def grid_lst():
+  for index, button in enumerate(self.button_lst):
+   button.grid(row = 0, column = index, padx = 10, pady = 10)
+
+class Action_button(Button):
+ def __init__(master, action_duration, balance_loss,  **kwargs):
+  self.action_duration = action duration
+  self.balance_loss = balance_loss
+  super().__init__(master, command = self.main, **kwargs)
+
+
+ 
+main_character = Character()
